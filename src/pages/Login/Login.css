@@ -1,0 +1,196 @@
+.container-login {
+  display: grid;
+  grid-template-columns: 48vw 48vw;
+}
+
+.image-login > img {
+  width: 50vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.form-login {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.welcome { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.welcome > img {
+  width: 9rem;
+  margin-left: 1rem;
+  margin-top: -3rem;
+}
+
+.form-login > form h1, form h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form-inputs {
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form-inputs > input {
+  border: none;
+  outline: none;
+  background-color: #f4f6f9;
+  width: 17rem;
+  height: 1.6rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  padding: 0 .5rem;
+}
+
+.appear {
+  display: flex;
+}
+
+.disappear {
+  display: none;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.button-signup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.buttons > button, .button-signup > button {
+  padding: 0.2rem 1rem;
+  margin: 1rem .5rem;
+  border: none;
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: red;
+  font-size: 12px;
+  margin-bottom: 1rem;
+  background-color: rgba(255, 0, 0, 0.508);
+  padding: .5rem;
+  border-radius: 2px;
+}
+
+.error > img {
+  width: .9rem;
+  margin-left: .5rem;
+  cursor: pointer;
+}
+
+.success {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(0, 65, 25);
+  font-size: 12px;
+  margin-bottom: 1rem;
+  background-color: rgba(1, 169, 65, 0.564);
+  padding: .5rem;
+  border-radius: 2px;
+}
+
+.success > img {
+  width: .9rem;
+  margin-left: .5rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .container-login {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../../assets/images/Gallery-login.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .image-login {
+    display: none;
+  }
+
+  .form-login {
+    padding-top: .5rem;
+    width: 70vw;
+    height: 97vh;
+    backdrop-filter: blur(5px) saturate(200%);
+    background-color: rgba(171, 171, 171, 0.46);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+  }
+
+  .form-login > form {
+    padding: 2rem 0;
+  }
+  
+  .error > img {
+    left: 74%;
+  }
+  
+  .success > img {
+    left: 74%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+
+  .form-login > form h1 {
+    font-size: 20px;
+  }
+
+  .form-login > form h2 {
+    font-size: 16px;
+  }
+
+  .form-login > form .logo {
+    width: 6rem;
+    margin-top: -2.5rem;
+  }
+  
+  .form-inputs > input {
+    width: 13rem;
+    height: 1.6rem;
+  }
+
+  .error {
+    width: 70%;
+  }
+  
+  .error > img {
+    width: .7rem;
+  }
+
+  .success {
+    width: 70%;
+  }
+  
+  .success > img {
+    width: .7rem;
+  }
+}

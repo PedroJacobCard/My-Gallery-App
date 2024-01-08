@@ -1,0 +1,40 @@
+{
+  "fotos": [
+    {
+      "id": 1,
+      "title": "white fox",
+      "category": "animal",
+      "image_url": "https://img.freepik.com/vetores-gratis/ilustracao-de-kitsune-desenhada-a-mao_23-2149376317.jpg?w=740&t=st=1700314641~exp=1700315241~hmac=8b8865a89b3662d0adfd86dd0de8402a3fbe3882cb9b2c80ee5ba17a1fcd44e8"
+    },
+    {
+      "id": 2,
+      "title": "Tiger",
+      "category": "animal",
+      "image_url": "https://img.freepik.com/fotos-gratis/vista-do-tigre-na-natureza_23-2150460847.jpg?w=360&t=st=1700315191~exp=1700315791~hmac=6ace536c569551482ad01fb334f77ce1e5fa2926c1b8e309898c7df7c75d326d"
+    },
+    {
+      "id": 3,
+      "title": "Mountain",
+      "category": "nature",
+      "image_url": "https://img.freepik.com/fotos-gratis/foto-vertical-de-belas-colinas-rochosas-em-spiti_181624-23951.jpg?w=360&t=st=1700315285~exp=1700315885~hmac=5c74cef34959d6d7997bd030f906503c434b2b8bd1be83f566ce09e5bcc47feb"
+    },
+    {
+      "id": 4,
+      "title": "Building at the sunset",
+      "category": "cityscape",
+      "image_url": "https://img.freepik.com/fotos-premium/projeto-arquitetonico-edificio-arquitetura-fachada-do-edificio-com-varias-janelas-edificio-alto_751108-109.jpg?w=360"
+    },
+    {
+      "id": 5,
+      "title": "Friends at the sunset",
+      "category": "friends",
+      "image_url": "https://img.freepik.com/fotos-gratis/uma-silhueta-de-um-grupo-de-pessoas-se-diverte-no-topo-da-montanha-perto-da-tenda-durante-o-por-do-sol_146671-18472.jpg?w=740&t=st=1700315539~exp=1700316139~hmac=f42d74d08d0db4ca2983a5abd0493617223c7c18b6273a4607e10b22b84970be"
+    },
+    {
+      "id": 6,
+      "title": "friends from behind",
+      "category": "friends",
+      "image_url": "https://img.freepik.com/fotos-gratis/amigos-se-divertindo-no-reencontro_23-2149215801.jpg?w=740&t=st=1700315640~exp=1700316240~hmac=413c8bb350bde2b1c4798a895e455ca8a2682c370ce6e3f87611d750a2dbb9a7"
+    }
+  ]
+}

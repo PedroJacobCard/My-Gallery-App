@@ -1,0 +1,403 @@
+.container-nav {
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  position: fixed;
+  backdrop-filter: blur(5px) saturate(200%);
+    background-color: rgba(171, 171, 171, 0.46);
+    border-radius: 0 0 12px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+  z-index: 999;
+}
+
+.container-nav-logo {
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  margin-left: 2rem;
+  gap: 2rem;
+}
+
+.container-nav-logo > img {
+  max-width: 8rem;
+  cursor: pointer;
+}
+
+.container-nav-search, .container-nav-search-sidebar {
+  width: 80%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row;
+  margin-right: 1rem;
+}
+
+.search-wrapper, .search-wrapper-sidebar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.search-input, .search-input-sidebar {
+  width: 10rem;
+  height: 2rem;
+  border: none;
+  outline: none;
+  padding: .4rem;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.filtered-fotos, .filtered-fotos-sidebar {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  backdrop-filter: blur(5px) saturate(180%);
+  -webkit-backdrop-filter: blur(5px) saturate(180%);
+  background-color: #84ab7a99;
+  border-radius: 4px;
+  width: 10rem;
+  height: 6rem;
+  padding: .5rem;
+  overflow-y: scroll;
+  top: 2rem;
+  left: 0rem;
+  transition: opacity .4s ease-in-out;
+}
+
+.search-input:focus + .filtered-fotos,
+.search-input-sidebar:focus + .filtered-fotos-sidebar {
+  opacity: 1;
+  visibility: visible;
+}
+
+.filtered-fotos:hover, .filtered-fotos-sidebar:hover {
+  opacity: 1;
+  visibility: visible;
+}
+
+.filtered-fotos > p, .filtered-fotos-sidebar > p {
+  cursor: pointer;
+}
+
+.lupe, .lupe-sidebar {
+  background-color: #84AB7A;
+  margin-left: -1rem;
+  padding: .2rem;
+  width: 2rem;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.user-photo > img, .user-photo-sidebar > img {
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0 2rem;
+  cursor: pointer;
+}
+
+.display {
+  display: flex;
+}
+
+.none {
+  display: none;
+}
+
+.account {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  backdrop-filter: blur(5px) saturate(180%);
+  -webkit-backdrop-filter: blur(5px) saturate(180%);
+  background-color: #84ab7a99;
+  border-radius: 4px;
+  width: 10rem;
+  height: 22rem;
+  margin-right: 2rem;
+  padding: .5rem;
+  cursor: pointer;
+}
+
+.account > img {
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 5rem 2rem 0;
+}
+
+.account > span {
+  margin-top: 1rem;
+}
+
+.account > button {
+  width: 90%;
+  padding: .4rem;
+  margin: 1rem 2rem 0;
+  border: none;
+}
+
+.account > .close-account {
+  width: 1rem;
+  margin: 7rem 0 -4.5rem;
+}
+
+.burger > img {
+  display: none;
+  margin-right: 2rem;
+  width: 2rem;
+  height: 2.5rem;
+}
+
+.side-navbar {
+  position: fixed;
+  height: 100vh;
+  width: 25rem;
+  padding-top: 8rem;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: top;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+  background-color: rgba(122, 122, 122, 0.696);
+  z-index: 1000;
+}
+
+.user-photo-sidebar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.user-photo-sidebar > button {
+  width: 90%;
+  padding: .4rem;
+  margin: 1rem 2rem 0;
+  border: none;
+}
+
+.user-photo-sidebar > span {
+  margin-top: 1rem;
+}
+
+.close-sidebar {
+  width: 1.5rem;
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  cursor: pointer;
+}
+
+.show {
+  opacity: 1 ;
+  visibility: visible;
+  transition: all .4s ease-in-out;
+}
+
+.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.account-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 1000;
+  overflow-y: scroll;
+}
+
+.close-account-wrapper {
+  width: 1.5rem;
+  position: absolute;
+  top: 6%;
+  left: 92%;
+  cursor: pointer;
+}
+
+.user-photo-account-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.user-photo-account-wrapper> img {
+  width: 6rem;
+  margin-bottom: 1rem;
+}
+
+.user-photo-account-wrapper> span {
+  font-size: 1.5rem;
+}
+
+.buttons-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 1rem;
+  margin-top: -7rem;
+}
+
+.delete-account {
+  width: 20%;
+  padding: .4rem;
+  border: none;
+  background-color: rgb(208, 0, 0);
+}
+
+.delete-account:hover {
+  background-color: rgb(163, 0, 0);
+}
+
+.logout-account {
+  width: 20%;
+  padding: .4rem;
+  border: none;
+  background-color: #84AB7A;
+}
+
+.logout-account:hover {
+  background-color: #6a8b63;
+}
+
+.update-form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+
+.update-form > form{
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-areas:
+    'username username'
+    'email email'
+    'oldPassword oldPassword'
+    'password password'
+    'password password'
+    'confirmPassword confirmPassword'
+    'submitButton submitButton';
+  gap: 0 1rem;
+  margin: 1rem 0;
+}
+
+.update-form > form > label {
+  color: #000000;
+}
+
+.update-form > form > input {
+  width: 100%;
+  background-color: #ededed;
+}
+
+.update-form > form > button {
+  grid-area: submitButton;
+  margin-top: 1rem;
+  place-self: center;
+  width: 30%;
+}
+
+@media  (max-width: 768px) {
+  .user-photo-account-wrapper {
+    margin-top: 10rem;
+  }
+}
+
+@media  (max-width: 425px) {
+  .container-nav-search, .user-photo {
+    display: none;
+  }
+  
+  .search-input {
+    width: 20rem;
+  }
+  
+  .burger > img {
+    display: block;
+  }
+  
+  .side-navbar {
+    width: 60vw;
+  }
+  
+  .container-nav-search-sidebar {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .search-wrapper-sidebar {
+    width: 100%;
+  }
+
+  .search-input-sidebar {
+    width: 80%;
+  }
+
+  .filtered-fotos-sidebar {
+    width: 80%;
+    top: 2rem;
+    left: 1.2rem;
+  }
+
+  .user-photo-sidebar > img {
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .account {
+    display: none;
+  }
+
+  .close-account-wrapper {
+    left: 85%;
+  }
+  
+  .buttons-container > button {
+    width: 40%;
+  }
+
+  .update-form > form{
+    grid-template-columns: auto;
+    grid-template-areas: 
+    'username'
+    'username'
+    'email'
+    'email'
+    'oldPassword'
+    'oldPassword'
+    'password'
+    'password'
+    'confirmPassword'
+    'confirmPassword'
+    'submitButton';
+  }
+}

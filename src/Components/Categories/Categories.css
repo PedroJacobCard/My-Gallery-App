@@ -1,0 +1,140 @@
+.container-categories{
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  overflow-x: scroll;
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+.container-categories > h1, button {
+  margin-top: 9rem;
+  list-style: none;
+  text-decoration: none;
+  background-color: #84AB7A;
+  color: #eee;
+  padding: 1rem;
+  border-radius: 3px;
+  transition: background-color .3s ease-in-out;
+}
+
+.container-categories > h1:hover, button:hover {
+  cursor: pointer;
+  background-color: #607b5a;
+}
+
+.container-categories > button {
+  border: none;
+}
+
+.container-categories > button > img {
+  width: 2rem;
+}
+
+.add-fotos-wrapper {
+  width: 50%;
+  height: 70%;
+  backdrop-filter: blur(5px) saturate(180%);
+  -webkit-backdrop-filter: blur(5px) saturate(180%);
+  background-color: rgba(74, 105, 86, 0.75);
+  position: fixed;
+  top: 20%;
+  left: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  z-index: 1000;
+  border-radius: 6px;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+form > input {
+  width: 50%;
+  margin-bottom: 2rem;
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+  height: 1.6rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  padding: 0 .5rem;
+  background-color: #d9e3d6;
+}
+
+form > label {
+  margin-bottom: .5rem;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+form > button {
+  margin: 0;
+  padding: .5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+}
+
+.appear {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  transition: all .4s ease;
+}
+
+.desappear {
+  transform: translateY(150%);
+  transition: all .4s ease-in-out;
+  filter: blur(10px);
+}
+
+form > .error {
+  color: rgb(197, 0, 0);
+  background-color: transparent;
+}
+
+@media screen and (max-width: 768px) {
+  .container-categories > h1, button {
+    font-size: 20px;
+  }
+
+  .container-categories > h1:first-child {
+    padding: .3rem;
+  }
+  
+  .container-categories > button > img {
+    width: 1rem;
+  }
+
+  .close-wrapper {
+    left: 85%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .container-categories > h1, button {
+    font-size: 16px;
+  }
+
+  .container-categories > h1:first-child {
+    padding: .5rem;
+  }
+
+  .add-fotos-wrapper{
+    width: 90%;
+    height: 90vh;
+    top: 5%;
+    left: 5%;
+  }
+}
