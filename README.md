@@ -1,30 +1,16 @@
-# React + TypeScript + Vite
+# React + TypeScript + Vite + NodeJs + Sequelize + PostgreSQL - My Gallery App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Descritpion
+This Project is one of my own projects wich I've beeing eagerly working on!
+It is a gallery app that allows the user to make an secured account by JWT, wich anables a creation of an Oline gallery.
+The user can relate with this app based on the concepts of CRUD application. The user can crate a Photo from an existing online URL photo, display all of them, display a carroussel of the photos, update those and delete if wanted.
+The User account can also be updated and deleted.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+# Tecnologies used
+- ReactJs
+- TypeScript
+- Vite
+- NodeJs
+- ExpressJs
+- Sequelize
+- PostgreSQL
