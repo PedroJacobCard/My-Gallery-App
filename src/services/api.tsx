@@ -28,7 +28,7 @@ export const createSession = async (email: string | undefined, password: string 
   }
 }
 
-export const getFotos = async (userId: number | null): Promise<FotosType[]> => {
+export const getFotos = async (userId: string | null): Promise<FotosType[]> => {
   try {
     const response: AxiosResponse<FotosType[]> = await api.get(
       `/users/${userId}/fotos`
@@ -42,14 +42,14 @@ export const getFotos = async (userId: number | null): Promise<FotosType[]> => {
   
 //Create Data
 export const createUser = async (
-  user_name: string | undefined,
+  name: string | undefined,
   email: string | undefined,
   password: string | undefined,
   passwordConfirmation: string | undefined
 ): Promise<UserType | null> => {
   try {
     const response: AxiosResponse<UserType> = await api.post("/users", {
-      user_name,
+      name,
       email,
       password,
       passwordConfirmation,
@@ -65,10 +65,10 @@ export const createFoto = async (
   title: string | undefined,
   category: string | undefined,
   image_url: string | undefined,
-  user_id: number | undefined
+  userId: string | undefined
 ): Promise<FotosType | null> => {
   try {
-    const response: AxiosResponse<FotosType> = await api.post('/fotos', {title, category, image_url, user_id})
+    const response: AxiosResponse<FotosType> = await api.post('/fotos', {title, category, image_url, userId})
     return response.data;
   } catch (error) {
     console.error('Error on creating the photo', error)
@@ -77,26 +77,26 @@ export const createFoto = async (
 };
 
 //update Data 
-export const updateUser = async (user_id: number, data: FieldValuesUpdateUser): Promise<UserType> => {
-    const response: AxiosResponse<UserType> = await api.put(`/users/${user_id}`, data);
+export const updateUser = async (userId: string, data: FieldValuesUpdateUser): Promise<UserType> => {
+    const response: AxiosResponse<UserType> = await api.put(`/users/${userId}`, data);
     return response.data;
 }
 
-export const updateFoto = async (fotoId: number, data: FieldValuesUpdateFoto): Promise<FotosType> => {
+export const updateFoto = async (fotoId: string, data: FieldValuesUpdateFoto): Promise<FotosType> => {
   const response: AxiosResponse<FotosType> = await api.put(`/fotos/${fotoId}`, data);
   return response.data;
 }
 
 //Delete Data
-export const deleteFoto = async (id: number | undefined): Promise<FotosType | null> => {
+export const deleteFoto = async (id: string | undefined): Promise<FotosType | null> => {
     const response: AxiosResponse<FotosType> = await api.delete(`/fotos/${id}`);
     return response.data;
 }
 
-export const deleteUser = async (userId: number) => {
+export const deleteUser = async (userId: string) => {
   await api.delete(`/users/${userId}`);
 }
 
-export const deleteAllUserFotos = async (userId: number) => {
-  await api.delete(`/fotos/${userId}`)
+export const deleteAllUserFotos = async (userId: string) => {
+  await api.delete(`/users/${userId}/fotos`)
 }

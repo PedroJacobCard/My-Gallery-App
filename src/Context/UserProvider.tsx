@@ -8,8 +8,8 @@ import toast from "react-hot-toast";
 import { FieldValuesUpdateUser } from "../Components/Nav/ValidationSchemaUpdate";
 
 export type UserType = {
-  id: number;
-  user_name: string;
+  id: string;
+  name: string;
   email: string;
 };
 
@@ -27,7 +27,7 @@ export type UseUserContextType = {
   successfullyCreated: boolean;
   setSuccessfullyCreated: React.Dispatch<React.SetStateAction<boolean>>;
   handleUpdateUser: (data: FieldValuesUpdateUser) => void;
-  handleDeleteUser: (userId: number) => void;
+  handleDeleteUser: (userId: string) => void;
 };
 
 const initContextState: UseUserContextType = {
@@ -107,7 +107,7 @@ function UserProvider({children}: ChildrenType) {
     try {
       const fetchUser = async (): Promise<void> => {
         try {
-          const response = await createUser(data.user_name, data.email, data.password, data.confirmPassword);
+          const response = await createUser(data.name, data.email, data.password, data.confirmPassword);
           
           if (response) {
             setSuccessfullyCreated(true);
@@ -146,7 +146,7 @@ function UserProvider({children}: ChildrenType) {
     }
   };
   
-  function handleDeleteUser(userId: number) {
+  function handleDeleteUser(userId: string) {
     deleteUser(userId)
     .then(() => {
       deleteAllUserFotos(userId)

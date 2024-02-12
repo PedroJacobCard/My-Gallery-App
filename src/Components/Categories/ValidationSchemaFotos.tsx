@@ -10,8 +10,8 @@ export const schema = z.object({
   image_url: z.string({
     required_error: 'Please enter a image URL'
   }).min(10, 'URL is too short'),
-  user_id: z.number({
-    required_error: "User ID must be a number"
+  userId: z.string({
+    required_error: "User ID is required"
   }).min(1, 'ID is too short')
 });
 

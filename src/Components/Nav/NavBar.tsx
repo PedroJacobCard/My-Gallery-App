@@ -54,7 +54,7 @@ const NavBar = () => {
     setUserAccountWrapper(prev => !prev)
   }
 
-  const deleteUser = (id: number) => {
+  const deleteUser = (id: string) => {
     
     const confirmed = window.confirm(
       "Are you sure you want to delete your account?"
@@ -72,7 +72,7 @@ const NavBar = () => {
   } = useForm<FieldValuesUpdateUser>({
     resolver: zodResolver(schema),
     defaultValues: {
-      user_name: user?.user_name || undefined,
+      user_name: user?.name || undefined,
       email: user?.email || undefined,
       oldPassword: '',
       password: undefined,
@@ -132,7 +132,7 @@ const NavBar = () => {
           ) : (
             <img src={User} alt="user photo" />
           )}
-          <span>{user?.user_name}</span>
+          <span>{user?.name}</span>
           <button onClick={logout}>Log Out</button>
           <button onClick={toggleUserAccountWrapper}>Account Settings</button>
         </div>
@@ -152,7 +152,7 @@ const NavBar = () => {
             ) : (
               <img src={User} alt="user photo" />
             )}
-            <span>{user?.user_name}</span>
+            <span>{user?.name}</span>
             <button onClick={logout}>Log Out</button>
             <button onClick={toggleUserAccountWrapper}>Account Settings</button>
           </div>
@@ -192,7 +192,7 @@ const NavBar = () => {
             ) : (
               <img src={User} alt="user photo" />
             )}
-            <span>{user?.user_name}</span>
+            <span>{user?.name}</span>
             <div className="buttons-container">
               <button className="logout-account" onClick={logout}>
                 Log Out

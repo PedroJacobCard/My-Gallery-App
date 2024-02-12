@@ -42,14 +42,14 @@ function SignupLoginPage() {
           <div className="form-inputs">
             <label htmlFor="name">User Name:</label>
             <Controller
-              name="user_name"
+              name="name"
               control={control}
               render={({ field }) => (
                 <input type="text" autoComplete="User Name" {...field} />
               )}
             />
-            {errors.user_name && (
-              <p className="error">{errors.user_name.message}</p>
+            {errors.name && (
+              <p className="error">{errors.name.message}</p>
             )}
             <label htmlFor="email">Email:</label>
             <Controller

@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 export const schema = z.object({
-  id: z.number().optional(),
+  id: z.string().optional(),
   title: z.string().optional(),
   category: z.string().optional(),
   image_url: z.string().optional(),

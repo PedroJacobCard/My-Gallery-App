@@ -86,7 +86,7 @@ const AllFotos = () => {
     }
   };
 
-  const deleteFoto = (id: number) => {
+  const deleteFoto = (id: string) => {
     const confirm = window.confirm('Are you sure you want to delete this picture?')
 
     if (confirm) {

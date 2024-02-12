@@ -6,11 +6,11 @@ import toast from "react-hot-toast";
 import { FieldValuesUpdateFoto } from "../pages/Gallery/ValidationSchemaUpdateFoto";
 
 export type FotosType = {
-  id: number,
+  id: string,
   title: string,
   category: string,
   image_url: string,
-  user_id: number,
+  userId: string,
 }
 
 const initState: FotosType[] = [];
@@ -18,8 +18,8 @@ const initState: FotosType[] = [];
 export type UseFotosContextType = {
   fotos: FotosType[];
   handleCreateFoto: (data: Omit<FotosType, "id">) => void;
-  handleUpdateFoto: (fotoId:number, data: FieldValuesUpdateFoto) => void;
-  handleDeleteFoto: (fotoId: number) => void;
+  handleUpdateFoto: (fotoId: string, data: FieldValuesUpdateFoto) => void;
+  handleDeleteFoto: (fotoId: string) => void;
 };
 
 const initContextState: UseFotosContextType = {
@@ -73,7 +73,7 @@ const FotosProvider = ({children}: ChildrenProps) => {
       api.defaults.headers.Authorization = `Bearer ${token}`;
       const fetchFotos = async (): Promise<void> => {
         try {
-          const newFoto = await createFoto(data.title, data.category.toLowerCase(), data.image_url, data.user_id);
+          const newFoto = await createFoto(data.title, data.category.toLowerCase(), data.image_url, data.userId);
           
           if (newFoto) {
             setFotos([...fotos, newFoto])
@@ -90,14 +90,14 @@ const FotosProvider = ({children}: ChildrenProps) => {
     }
   }
 
-  function handleUpdateFoto(fotoId: number, data: FieldValuesUpdateFoto) {
+  function handleUpdateFoto(fotoId: string, data: FieldValuesUpdateFoto) {
       updateFoto(fotoId, data).then((res) => {
       setFotos([...fotos.filter(foto => foto.id !== res.id), res])
       toast.success('Photo successefully updated!')
     })
   }
 
-  function handleDeleteFoto(id: number) {
+  function handleDeleteFoto(id: string) {
     if (token) {
       api.defaults.headers.authorization = `Bearer ${token}`
       const filteredFotos = fotos.filter(item => item.id !== id)

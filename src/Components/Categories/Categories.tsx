@@ -49,7 +49,7 @@ function Categories() {
         title: '',
         category: '',
         image_url: '',
-        user_id: user!.id
+        userId: user!.id
       }
     })
     

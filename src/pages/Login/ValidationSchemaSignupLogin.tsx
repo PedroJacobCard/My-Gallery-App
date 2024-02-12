@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 export const schema = z.object({
-  user_name: z
+  name: z
     .string({
       required_error: "User name is obligated",
     })
