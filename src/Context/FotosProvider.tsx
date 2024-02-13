@@ -78,6 +78,8 @@ const FotosProvider = ({children}: ChildrenProps) => {
           if (newFoto) {
             setFotos([...fotos, newFoto])
             toast.success('New Foto successfuly created');
+          } else {
+            console.log('Something went wrong')
           }
         } catch (error) {
           console.error('Error on creating a new photo', error)
