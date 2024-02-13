@@ -1,4 +1,4 @@
-# React + TypeScript + Vite + NodeJs + Sequelize + PostgreSQL - My Gallery App
+# React + TypeScript + Vite - My Gallery App
 
 # Descritpion
 This Project is one of my own projects wich I've beeing eagerly working on!
@@ -10,7 +10,3 @@ The User account can also be updated and deleted.
 - ReactJs
 - TypeScript
 - Vite
-- NodeJs
-- ExpressJs
-- Sequelize
-- PostgreSQL
