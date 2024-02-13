@@ -30,6 +30,7 @@ function Categories() {
 
     const addNewFoto = () => {
       setToggle(prev => !prev)
+      console.log(user?.name)
     }
     
     const closeWrapper = () => {
