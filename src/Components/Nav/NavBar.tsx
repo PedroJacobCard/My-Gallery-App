@@ -72,7 +72,7 @@ const NavBar = () => {
   } = useForm<FieldValuesUpdateUser>({
     resolver: zodResolver(schema),
     defaultValues: {
-      user_name: user?.name || undefined,
+      name: user?.name || undefined,
       email: user?.email || undefined,
       oldPassword: '',
       password: undefined,
@@ -208,16 +208,16 @@ const NavBar = () => {
           <div className="update-form">
             <h2>Update Profile</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
-              <label htmlFor="user_name">User Name:</label>
+              <label htmlFor="name">User Name:</label>
               <Controller
-                name="user_name"
+                name="name"
                 control={control}
                 render={({ field }) => (
                   <input type="text" id="username" {...field} />
                 )}
               />
-              {errors.user_name && (
-                <p style={{ color: "red" }}>{errors.user_name.message}</p>
+              {errors.name && (
+                <p style={{ color: "red" }}>{errors.name.message}</p>
               )}
               <label htmlFor="email">Email:</label>
               <Controller
