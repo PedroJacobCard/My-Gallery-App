@@ -10,7 +10,7 @@ import { FieldValuesCreateFoto, schema } from './ValidationSchemaFotos';
 
 import { zodResolver } from '@hookform/resolvers/zod';
 import useUser from '../../hook/useUser';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function Categories() {
   const [toggle, setToggle] = useState<boolean>(false);
@@ -30,7 +30,6 @@ function Categories() {
 
     const addNewFoto = () => {
       setToggle(prev => !prev)
-      console.log(user?.id)
     }
     
     const closeWrapper = () => {
@@ -61,6 +60,10 @@ function Categories() {
       reset();
       closeWrapper();
     }
+
+    useEffect(() => {
+      console.log(user)
+    }, []);
 
   return (
     <div className="container-categories">
