@@ -55,6 +55,7 @@ function Categories() {
     
     const onSubmit: SubmitHandler<FieldValuesCreateFoto> = (data, event) => {
       event?.preventDefault();
+      console.log("Submitted data", data);
       handleCreateFoto(data);
       reset();
       closeWrapper();
