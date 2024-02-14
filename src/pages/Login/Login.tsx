@@ -63,7 +63,7 @@ function LoginPage() {
           </div>
           <h2>Sign in</h2>
           <div className="form-inputs">
-            <label htmlFor="name or email">Email:</label>
+            <label htmlFor="email">Email:</label>
             <Controller
               name="email"
               control={control}
